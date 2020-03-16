@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <center>
+      <AnchorPane prefHeight="145.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtPwd" layoutX="179.0" layoutY="14.0" />
+            <TextField fx:id="txtPhrase" layoutX="238.0" layoutY="79.0" onKeyPressed="#adjustTheProperLength" prefHeight="25.0" prefWidth="118.0" />
+            <CheckBox fx:id="chckbxNumbers" layoutX="30.0" layoutY="83.0" mnemonicParsing="false" text="Numbers" />
+            <Label layoutX="34.0" layoutY="18.0" text="Random password result:" />
+            <Label layoutX="239.0" layoutY="58.0" text="That must be in that..." />
+            <Button layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#createPwd" text="Create the password" />
+            <CheckBox fx:id="chckbxSpecChar" layoutX="29.0" layoutY="106.0" mnemonicParsing="false" text="Special characters" />
+            <Label layoutX="411.0" layoutY="58.0" text="Length" />
+            <Label layoutX="30.0" layoutY="61.0" text="Lower and Uppercase letters and..." />
+            <TextField fx:id="txtLength" layoutX="411.0" layoutY="79.0" prefHeight="25.0" prefWidth="54.0" />
+            <CheckBox fx:id="chckbxUngapped" layoutX="239.0" layoutY="108.0" mnemonicParsing="false" text="This must be ungapped" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="152.0" layoutY="20.0" text="Random password generator">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

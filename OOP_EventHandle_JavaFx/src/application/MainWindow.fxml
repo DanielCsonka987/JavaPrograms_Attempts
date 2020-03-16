@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="126.0" layoutY="25.0" text="Dinamicly generated EventHandling presentation">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="380.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="lstvwList" layoutY="26.0" prefHeight="200.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="chcbxSelects" layoutX="26.0" layoutY="324.0" prefWidth="150.0" />
+            <ComboBox fx:id="cmbbxSelects" layoutX="26.0" layoutY="278.0" prefWidth="150.0" />
+            <Label layoutX="12.0" layoutY="6.0" text="Events connected select and scroll" />
+            <Label layoutX="26.0" layoutY="257.0" text="ComboBox connected select" />
+            <Label layoutX="26.0" layoutY="303.0" text="ChoiseBox connected select" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="380.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnFirst" layoutX="100.0" layoutY="86.0" mnemonicParsing="false" text="Click here" />
+            <Button fx:id="btnSecond" layoutX="100.0" layoutY="132.0" mnemonicParsing="false" text="... or here" />
+            <Slider fx:id="sldHorizont" layoutX="30.0" layoutY="39.0" orientation="VERTICAL" />
+            <Slider fx:id="sldVertical" layoutX="30.0" layoutY="231.0" />
+            <Label layoutX="30.0" layoutY="14.0" text="Button click, slider scroll" />
+            <TextField fx:id="txtFldText" layoutX="20.0" layoutY="305.0" />
+            <Label layoutX="20.0" layoutY="282.0" text="TextField typing" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="380.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="rdBtn1" layoutX="43.0" layoutY="56.0" mnemonicParsing="false" text="Windows">
+               <toggleGroup>
+                  <ToggleGroup fx:id="os" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdBtn2" layoutX="43.0" layoutY="84.0" mnemonicParsing="false" text="Linux" toggleGroup="$os" />
+            <RadioButton fx:id="rdBtn3" layoutX="43.0" layoutY="114.0" mnemonicParsing="false" text="macOS" toggleGroup="$os" />
+            <RadioButton fx:id="rdBtn4" layoutX="43.0" layoutY="146.0" mnemonicParsing="false" text="Android" toggleGroup="$os" />
+            <CheckBox fx:id="chckbxColor1" layoutX="53.0" layoutY="267.0" mnemonicParsing="false" text="White" />
+            <CheckBox fx:id="chckbxColor2" layoutX="53.0" layoutY="294.0" mnemonicParsing="false" text="Red" />
+            <CheckBox fx:id="chckbxColor3" layoutX="53.0" layoutY="321.0" mnemonicParsing="false" text="Yellow" />
+            <CheckBox fx:id="chckbxColor4" layoutX="53.0" layoutY="349.0" mnemonicParsing="false" text="Blue" />
+            <Label layoutX="43.0" layoutY="31.0" text="Radiobutton select" />
+            <Label layoutX="46.0" layoutY="243.0" text="CheckBox select" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblResults" layoutX="51.0" layoutY="27.0" text="Results here" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

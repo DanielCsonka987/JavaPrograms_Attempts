@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <!--For the localhost XAMP db server  
+    -->
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/datas?useTimezone=true&amp;serverTimezone=UTC</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <!-- 
+  <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+  <property name="hibernate.connection.url">jdbc:mysql:skilldb.db</property>
+  <property name="hibernate.dialect">com.applerao.hibernatesqlite.dialect.SQLiteDialect</property>
+    -->
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.current_session_context_class">thread</property>
+  <property name="hibernate.connection.CharSet">utf8</property>
+  <property name="hibernate.connection.characterEncoding">utf8</property>
+  <property name="hibernate.connection.useUnicode">true</property>
+  <property name="hibernate.show_sql">true</property>
+  <mapping class="model.NormLevelModel"/>
+  <mapping class="model.SkillBodyModel"/>
+  <mapping class="model.SpecialSkillModel"/>
+  <mapping class="model.SpecLevelModel"/>
+ </session-factory>
+</hibernate-configuration>
