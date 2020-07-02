@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presenter.PresenterControl">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnLoadDB" layoutX="17.0" layoutY="61.0" mnemonicParsing="false" onAction="#loadInDatabaseContenProcesst" text="Load in content" />
+            <Button fx:id="btnSaveUser" layoutX="36.0" layoutY="103.0" mnemonicParsing="false" onAction="#saveUserProcess" prefHeight="25.0" prefWidth="81.0" text="Save user" />
+            <Button fx:id="btnUpdateUser" layoutX="36.0" layoutY="134.0" mnemonicParsing="false" onAction="#updateUserProcesS" text="Update user" />
+            <Button fx:id="btnDeleteUser" layoutX="36.0" layoutY="165.0" mnemonicParsing="false" onAction="#deleteUserProcess" prefHeight="25.0" prefWidth="81.0" text="Delete user" />
+            <Button fx:id="btnClearFields" layoutX="9.0" layoutY="468.0" mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+            <TextField fx:id="txtbxUserfirstn" layoutX="11.0" layoutY="263.0" prefHeight="25.0" prefWidth="175.0" />
+            <TextField fx:id="txtbxUserlastn" layoutX="11.0" layoutY="306.0" prefHeight="25.0" prefWidth="175.0" />
+            <ComboBox fx:id="cmbbxDBs" layoutX="16.0" layoutY="32.0" onAction="#chooseDBSourceProcess" prefWidth="150.0" />
+            <TextField fx:id="txtbxUserid" layoutX="12.0" layoutY="221.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="11.0" layoutY="206.0" text="User id" />
+            <Label layoutX="12.0" layoutY="248.0" text="User First name" />
+            <Label layoutX="11.0" layoutY="291.0" text="User Last Name" />
+            <TextField fx:id="txtbxUseremail" layoutX="11.0" layoutY="349.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label layoutX="11.0" layoutY="333.0" text="User Email" />
+            <DatePicker fx:id="dtpckrUserDate" layoutX="12.0" layoutY="392.0" />
+            <Label layoutX="13.0" layoutY="376.0" text="Registration date" />
+            <Label layoutX="15.0" layoutY="14.0" text="Database sources" />
+            <TextField fx:id="txtbxUserReghour" layoutX="11.0" layoutY="437.0" prefHeight="25.0" prefWidth="41.0" />
+            <Label layoutX="13.0" layoutY="421.0" text="Registration time (hour/min/sec)" />
+            <TextField fx:id="txtbxUserRegmin" layoutX="79.0" layoutY="437.0" prefHeight="25.0" prefWidth="41.0" />
+            <TextField fx:id="txtbxUserRegsec" layoutX="145.0" layoutY="437.0" prefHeight="25.0" prefWidth="41.0" />
+            <Label layoutX="62.0" layoutY="430.0" text=":">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="430.0" text=":">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnExitDB" layoutX="121.0" layoutY="61.0" mnemonicParsing="false" onAction="#exitDB" text="Close" />
+            <Label fx:id="lblStatusIndicator" layoutX="125.0" layoutY="14.0" text="Offline">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <TableView fx:id="tblvwUsers" onMouseClicked="#recordHasSelected" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

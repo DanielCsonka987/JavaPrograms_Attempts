@@ -1,0 +1,6 @@
+
+use userdatabase;
+
+db.createCollection("userlogindata");
+
+db.userlogindata.insert( [ {id:1, fname:"some", lname: "body", email: "this@gmail.com", regdate: new Date("2012-10-11 10:31:11") }, {id:2, fname:"me", lname: "here", email: "that@gmail.com", regdate: new Date("2020-06-11 15:13:01") }, {id:3, fname:"you", lname: "there", email: "other@gmail.com", regdate: new Date("2018-07-15 16:14:16") } ] );
